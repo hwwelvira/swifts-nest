@@ -1,5 +1,5 @@
 name: Purge Cache
-on: [deployment_status]
+# on: [deployment_status]
 
 concurrency:
   group: ${{ github.job }}-${{ github.ref }}
