@@ -37,6 +37,8 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Tooltip from '@/components/Tooltip';
 
+import { Waline } from '../../components/Waline';
+
 import { BlogFrontmatter, BlogType } from '@/types/frontmatters';
 
 type SingleBlogPageProps = {
@@ -260,6 +262,13 @@ export default function SingleBlogPage({
               </CustomLink>
               <CustomLink href='/blog'>← Back to blog</CustomLink>
             </div>
+            <figure className='mt-12'>
+              <Waline
+                path={frontmatter.slug}
+                serverURL='comment.bjutswift.cn'
+                // 其他你需要的 Waline 配置项
+              />
+            </figure>
           </div>
         </section>
       </main>
