@@ -56,7 +56,7 @@ export default function IndexPage({
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              You can call me <Accent>Clarence</Accent>
+              We are <Accent>BJUT Swift</Accent>
             </h1>
             <p
               className='mt-2 max-w-4xl text-sm leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 md:text-base 2xl:text-lg'
@@ -65,10 +65,7 @@ export default function IndexPage({
                 trackEvent('Social Link: Dimension', { type: 'link' });
               }}
             >
-              Front-end Engineer at{' '}
-              <CustomLink href='https://dimension.dev/?ref=theodorusclarence.com'>
-                Dimension
-              </CustomLink>
+              Sharing Wisdom, Innovation & Futuristic Technologies (S.W.I.F.T.)
             </p>
             <p
               className={clsx(
@@ -77,8 +74,7 @@ export default function IndexPage({
               )}
               data-fade='3'
             >
-              I work with React Ecosystem, and write to teach people how to
-              rebuild and redefine fundamental concepts through mental models.
+              我们需要你们的力量，欢迎联系以加入组织、申请立项、反馈意见。
             </p>
 
             <p
