@@ -45,10 +45,6 @@ Major features are feature flagged in [constants/env.ts](https://github.com/theo
 For example:
 
 ```ts
-/**
- * Show command service on contents
- * @see Comment.tsx
- */
 export const commentFlag = isProd;
 ```
 
