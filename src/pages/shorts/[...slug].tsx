@@ -1,6 +1,5 @@
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useTheme } from 'next-themes';
 import { ParsedUrlQuery } from 'querystring';
 import * as React from 'react';
 import { HiOutlineEye } from 'react-icons/hi';
@@ -10,6 +9,7 @@ import useContentMeta from '@/hooks/useContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
+import CarbonAds from '@/components/CarbonAds';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
 import TableOfContents, {
@@ -19,7 +19,6 @@ import Tag from '@/components/content/Tag';
 import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
-import { Waline } from '@/components/Waline';
 
 import { LibraryType } from '@/types/frontmatters';
 
@@ -53,8 +52,6 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
     setToc(headingArr);
   }, [frontmatter.slug]);
   //#endregion  //*======== Scrollspy ===========
-
-  const { theme } = useTheme();
 
   return (
     <Layout>
@@ -120,6 +117,8 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
               </aside>
             </section>
 
+            <CarbonAds className='mt-8' />
+
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
               <CustomLink
                 href={`https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/shorts/${frontmatter.slug}.mdx`}
@@ -128,14 +127,6 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
               </CustomLink>
               <CustomLink href='/shorts'>← Back to shorts</CustomLink>
             </div>
-            <figure className='mt-12'>
-              <Waline
-                path={frontmatter.slug}
-                serverURL='comment.bjutswift.cn'
-                dark={theme === 'dark'}
-                // 其他你需要的 Waline 配置项
-              />
-            </figure>
           </div>
         </section>
       </main>

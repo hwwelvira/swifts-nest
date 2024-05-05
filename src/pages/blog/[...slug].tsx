@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { format } from 'date-fns';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useTheme } from 'next-themes';
 import { ParsedUrlQuery } from 'querystring';
 import * as React from 'react';
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi';
@@ -20,8 +19,10 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
+import CarbonAds from '@/components/CarbonAds';
 import BlogCard from '@/components/content/blog/BlogCard';
 import SubscribeCard from '@/components/content/blog/SubscribeCard';
+import Comment from '@/components/content/Comment';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
 import ReloadDevtool from '@/components/content/ReloadDevtool';
@@ -95,8 +96,6 @@ export default function SingleBlogPage({
     setToc(headingArr);
   }, [frontmatter.slug]);
   //#endregion  //*======== Scrollspy ===========
-
-  const { theme } = useTheme();
 
   return (
     <Layout>
@@ -229,6 +228,12 @@ export default function SingleBlogPage({
               title={frontmatter.title}
             />
 
+            <CarbonAds className='mt-8' />
+
+            <figure className='mt-12'>
+              <Comment key={frontmatter.slug} />
+            </figure>
+
             {populatedRecommendations.length > 0 && (
               <div className='mt-20'>
                 <h2>
@@ -261,7 +266,6 @@ export default function SingleBlogPage({
               <Waline
                 path={frontmatter.slug}
                 serverURL='comment.bjutswift.cn'
-                dark={theme === 'dark'}
                 // 其他你需要的 Waline 配置项
               />
             </figure>

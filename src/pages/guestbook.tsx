@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Accent from '@/components/Accent';
+import Comment from '@/components/content/Comment';
 import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
@@ -26,6 +27,9 @@ export default function GuestbookPage() {
                 AMA discussion
               </CustomLink>
             </p>
+            <figure className='mt-12'>
+              <Comment />
+            </figure>
           </div>
         </section>
       </main>

@@ -1,6 +1,5 @@
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useTheme } from 'next-themes';
 import { ParsedUrlQuery } from 'querystring';
 import * as React from 'react';
 import { HiLink, HiOutlineEye, HiPlay, HiUser } from 'react-icons/hi';
@@ -11,6 +10,7 @@ import { getFileBySlug, getFileSlugArray } from '@/lib/mdx.server';
 import useContentMeta from '@/hooks/useContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
+import Comment from '@/components/content/Comment';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
 import TableOfContents, {
@@ -20,7 +20,6 @@ import CloudinaryImg from '@/components/images/CloudinaryImg';
 import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
-import { Waline } from '@/components/Waline';
 
 import { ProjectType } from '@/types/frontmatters';
 
@@ -54,8 +53,6 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
     setToc(headingArr);
   }, [frontmatter.slug]);
   //#endregion  //*======== Scrollspy ===========
-
-  const { theme } = useTheme();
 
   return (
     <Layout>
@@ -178,6 +175,10 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
               </aside>
             </section>
 
+            <figure className='mt-12'>
+              <Comment />
+            </figure>
+
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
               <CustomLink
                 href={`https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/projects/${frontmatter.slug}.mdx`}
@@ -186,14 +187,6 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
               </CustomLink>
               <CustomLink href='/projects'>← Back to projects</CustomLink>
             </div>
-            <figure className='mt-12'>
-              <Waline
-                path={frontmatter.slug}
-                serverURL='comment.bjutswift.cn'
-                dark={theme === 'dark'}
-                // 其他你需要的 Waline 配置项
-              />
-            </figure>
           </div>
         </section>
       </main>
