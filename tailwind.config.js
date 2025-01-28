@@ -22,6 +22,10 @@ module.exports = {
         dark: '#0e1111',
       },
       keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: 0.99,
@@ -48,6 +52,8 @@ module.exports = {
       animation: {
         flicker: 'flicker 3s linear infinite',
         tilt: 'tilt 10s infinite linear',
+        sparkle: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        float: 'float 6s ease-in-out infinite',
       },
       typography: {
         DEFAULT: {

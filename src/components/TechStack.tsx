@@ -14,15 +14,15 @@ import Tooltip from '@/components/Tooltip';
 
 export default function TechStack() {
   return (
-    <div className='flex space-x-2 md:space-x-4'>
+    <div className='flex items-center justify-center space-x-4 md:space-x-8'>
       {stacks.map((tech) => (
         <Tooltip key={tech.id} tipChildren={<p>{tech.tooltip}</p>}>
           <tech.icon
             key={tech.id}
             className={clsx(
-              'h-8 w-8 md:h-10 md:w-10',
-              'text-gray-600 hover:text-primary-300 dark:text-gray-200 dark:hover:text-primary-300',
-              'transition-colors'
+              'h-8 w-8 md:h-12 md:w-12',
+              'text-gray-600 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400',
+              'transition-all duration-300 hover:scale-110'
             )}
           />
         </Tooltip>

@@ -57,7 +57,10 @@ export default function IndexPage({
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              We are <Accent>BJUT Swift</Accent>
+              We are{' '}
+              <Accent className='bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent'>
+                BJUT-SWIFT
+              </Accent>
             </h1>
             <p
               className='mt-2 max-w-4xl text-sm leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 md:text-base 2xl:text-lg'
@@ -104,7 +107,7 @@ export default function IndexPage({
               className='mt-4 flex flex-wrap gap-4 gap-y-2 md:mt-8'
             >
               <UnstyledLink
-                href='https://clarence.link/cv'
+                href='https://fafmkoqaxys.feishu.cn/base/W1XfbxnbUaOGh2s99ErcyZrdnPc?table=tblyS1mwO2WUSuBZ&view=vewoiUIlNk'
                 className={clsx(
                   'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                   'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -120,7 +123,7 @@ export default function IndexPage({
                   width={16}
                   className='shrink-0 transition-colors group-hover:text-[#1da1f2]'
                 />
-                <span>lark</span>
+                <span>飞书问卷</span>
               </UnstyledLink>
               <UnstyledLink
                 href='https://github.com/bjut-swift'
