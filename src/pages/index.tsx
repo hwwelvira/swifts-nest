@@ -79,8 +79,8 @@ export default function IndexPage({
               className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
               data-fade='4'
             >
-              Don't forget to sign my{' '}
-              <CustomLink href='/guestbook'>guestbook</CustomLink>!
+              欢迎来我们的 <CustomLink href='/guestbook'>留言簿</CustomLink>{' '}
+              留下你的声音！
             </p>
             <div
               data-fade='5'
@@ -95,9 +95,9 @@ export default function IndexPage({
                     'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
                   )}
                 />
-                <ButtonLink href='#intro'>Read the blog</ButtonLink>
+                <ButtonLink href='#intro'>我们的工作</ButtonLink>
               </div>
-              <ButtonLink href='/about'>Learn more about me</ButtonLink>
+              <ButtonLink href='/about'>了解 BJUT-SWIFT</ButtonLink>
             </div>
             <div
               data-fade='6'
