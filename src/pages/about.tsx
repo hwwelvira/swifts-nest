@@ -42,7 +42,7 @@ export default function AboutPage() {
               关于 <span className='animate-wiggle inline-block'>👋</span>
             </h2>
             <h1 className='mt-4 text-7xl font-bold' data-fade='1'>
-              <Accent className='bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent'>
+              <Accent className='bg-gradient-to-r from-blue-800 to-purple-600 bg-clip-text text-transparent'>
                 BJUT-SWIFT
               </Accent>
             </h1>

@@ -58,7 +58,7 @@ export default function IndexPage({
               data-fade='2'
             >
               We are{' '}
-              <Accent className='bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent'>
+              <Accent className='bg-gradient-to-r from-blue-800 to-purple-600 bg-clip-text text-transparent'>
                 BJUT-SWIFT
               </Accent>
             </h1>
