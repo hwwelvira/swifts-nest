@@ -98,9 +98,9 @@ export default function Header({ large = false }: HeaderProps) {
 }
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/shorts', label: 'Shorts' },
-  { href: '/about', label: 'About' },
+  { href: '/', label: '主页' },
+  { href: '/blog', label: '新闻' },
+  { href: '/projects', label: '项目' },
+  { href: '/shorts', label: '教程' },
+  { href: '/about', label: '关于' },
 ];
