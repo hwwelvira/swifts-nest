@@ -6,6 +6,7 @@ import GithubCard from '@/components/content/card/GithubCard';
 import { Pre } from '@/components/content/Pre';
 import SplitImage, { Split } from '@/components/content/SplitImage';
 import TweetCard from '@/components/content/TweetCard';
+import FeishuDocEmbed from '@/components/FeishuDocEmbed';
 import CloudinaryImg from '@/components/images/CloudinaryImg';
 import NextImage from '@/components/images/NextImage';
 import CustomLink from '@/components/links/CustomLink';
@@ -25,6 +26,7 @@ const MDXComponents = {
   TweetCard,
   GithubCard,
   Quiz,
+  FeishuDocEmbed,
 };
 
 export default MDXComponents;

@@ -348,8 +348,8 @@ export async function getStaticProps() {
   const shorts = await getAllFilesFrontmatter('library');
 
   const featuredPosts = getFeatured(blogs, [
-    'advanced-react-patterns',
-    '2023-retrospective',
+    '2024-cs50x',
+    '2023-code-journy',
     'fully-reusable-components',
     'react-core-concept-rendering-state',
     'nextjs-auth-hoc',
