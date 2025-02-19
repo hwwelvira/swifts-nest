@@ -272,7 +272,7 @@ export default function IndexPage({
             >
               <article className='layout' data-fade='0'>
                 <h2 className='text-2xl md:text-4xl' id='projects'>
-                  <Accent>Featured Projects</Accent>
+                  <Accent>项目</Accent>
                 </h2>
                 <p className='mt-2 text-gray-600 dark:text-gray-300'>
                   Some projects that I'm proud of
