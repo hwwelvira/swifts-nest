@@ -103,5 +103,4 @@ const links = [
   { href: '/projects', label: '项目' },
   { href: '/shorts', label: '教程' },
   { href: '/about', label: '关于' },
-  { href: '/address', label: '地址导航' },
 ];
