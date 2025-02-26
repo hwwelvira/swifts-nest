@@ -169,62 +169,61 @@ export default function IndexPage({
               id='intro'
               className={clsx('py-20', inView && 'fade-in-start')}
             >
-              <article
-                className={clsx(
-                  'layout flex flex-col-reverse items-center md:flex-row md:justify-start',
-                  'md:gap-4'
-                )}
-                data-fade='0'
-              >
-                <div className='mt-8 h-full w-full md:mt-0'>
-                  <h2 className='text-4xl md:text-6xl'>
-                    <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                      Rebuild your mental model
-                    </Accent>
-                  </h2>
-                  <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
-                    <Tooltip
-                      withUnderline
-                      tipChildren={
-                        <>
-                          A mental model is an explanation of someone's{' '}
-                          <strong>thought process</strong> about how something
-                          works. You can use it as your own guide that you can
-                          test through some cases.
-                        </>
-                      }
-                    >
-                      <span>Mental model</span>
-                    </Tooltip>{' '}
-                    will make front-end development more{' '}
-                    <strong className='text-gray-700 dark:text-gray-200'>
-                      predictable
-                    </strong>{' '}
-                    by seeing how they work{' '}
-                    <strong className='text-gray-700 dark:text-gray-200'>
-                      fundamentally
-                    </strong>
-                    . In my blog, I'm sharing how I approach something and how
-                    my mental model affect my learning about a certain topic.
+              <article className='layout' data-fade='0'>
+                <div className='flex flex-col md:flex-row md:items-center md:gap-8'>
+                  <div className='w-full md:w-1/2'>
+                    <h2 className='text-4xl md:text-6xl'>
+                      <Accent className='inline decoration-clone leading-snug dark:leading-none'>
+                        探索技术，
+                        <br className='md:hidden' />
+                        <span className='md:ml-2'>分享知识</span>
+                      </Accent>
+                    </h2>
+                    <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
+                      <Tooltip
+                        withUnderline
+                        tipChildren={
+                          <>
+                            BJUT-SWIFT 是北京工业大学的学生技术社区，致力于
+                            <strong>技术分享</strong>和<strong>知识传播</strong>
+                            ， 帮助同学们在技术领域更好地成长。
+                          </>
+                        }
+                      >
+                        <span>BJUT-SWIFT</span>
+                      </Tooltip>{' '}
+                      旨在让技术学习变得更加{' '}
+                      <strong className='text-gray-700 dark:text-gray-200'>
+                        简单
+                      </strong>{' '}
+                      和{' '}
+                      <strong className='text-gray-700 dark:text-gray-200'>
+                        高效
+                      </strong>
+                      。在我们的平台上，你可以找到实用的教程、项目经验分享以及最新的技术动态，
+                      帮助你在信息技术的海洋中找到前进的方向。
+                    </div>
                   </div>
-                </div>
-                <div className='h-full w-full'>
-                  <ul className='relative h-full'>
-                    <BlogCard
-                      className={clsx(
-                        'absolute max-w-[350px] transform-gpu',
-                        'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
-                        'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
-                        'rotate-3 md:rotate-6 lg:rotate-12',
-                        'pointer-events-none md:pointer-events-auto'
-                      )}
-                      post={populatedIntro[1]}
-                    />
-                    <BlogCard
-                      className='mx-auto max-w-[350px]'
-                      post={populatedIntro[0]}
-                    />
-                  </ul>
+
+                  <div className='mt-8 w-full md:mt-0 md:w-1/2'>
+                    <div className='perspective-1000 relative mx-auto h-[400px] w-[350px] max-w-full'>
+                      <div className='group relative h-full w-full'>
+                        <div className='absolute inset-0 z-10 transition-all duration-700 ease-in-out group-hover:z-0 group-hover:translate-x-[8%] group-hover:translate-y-[5%] group-hover:rotate-6 group-hover:opacity-90'>
+                          <BlogCard
+                            className='h-full w-full rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
+                            post={populatedIntro[0]}
+                          />
+                        </div>
+
+                        <div className='absolute inset-0 z-0 translate-x-[8%] translate-y-[5%] rotate-6 opacity-90 transition-all duration-700 ease-in-out group-hover:z-10 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:opacity-100'>
+                          <BlogCard
+                            className='h-full w-full rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
+                            post={populatedIntro[1]}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </article>
             </section>
@@ -347,14 +346,7 @@ export async function getStaticProps() {
   const projects = await getAllFilesFrontmatter('projects');
   const shorts = await getAllFilesFrontmatter('library');
 
-  const featuredPosts = getFeatured(blogs, [
-    '2024-cs50x',
-    '2023-code-journy',
-    'fully-reusable-components',
-    'react-core-concept-rendering-state',
-    'nextjs-auth-hoc',
-    'nextjs-fetch-method',
-  ]);
+  const featuredPosts = getFeatured(blogs, ['2024-cs50x', '2023-code-journy']);
   const featuredProjects = getFeatured(projects, [
     'hexcape',
     'notiolink',
@@ -366,10 +358,7 @@ export async function getStaticProps() {
     'writing-guide',
   ]);
 
-  const introPosts = getFeatured(blogs, [
-    'btb-flex-mental-model',
-    'nextjs-fetch-method',
-  ]);
+  const introPosts = getFeatured(blogs, ['2024-cs50x', '2023-code-journy']);
 
   return {
     props: {

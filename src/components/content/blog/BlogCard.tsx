@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { format } from 'date-fns';
+import Image from 'next/image';
 import * as React from 'react';
 import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi';
 
 import Accent from '@/components/Accent';
 import Tag from '@/components/content/Tag';
 import CloudinaryImg from '@/components/images/CloudinaryImg';
-import NextImage from '@/components/images/NextImage';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 import { BlogFrontmatter, InjectedMeta } from '@/types/frontmatters';
@@ -58,10 +58,8 @@ export default function BlogCard({
               className='relative w-full overflow-hidden rounded-t-md'
               style={{ paddingTop: '40%' }}
             >
-              <NextImage
+              <Image
                 src={post.banner}
-                width={1200}
-                height={(1200 * 2) / 5}
                 alt={`Photo from external link: ${post.banner}`}
                 layout='fill'
                 objectFit='cover'
