@@ -259,7 +259,7 @@ export default function IndexPage({
                     trackEvent('Home: See more post', { type: 'navigate' })
                   }
                 >
-                  See more post
+                  查看更多专栏
                 </ButtonLink>
               </article>
             </section>
@@ -295,7 +295,7 @@ export default function IndexPage({
                     trackEvent('Home: See more project', { type: 'navigate' })
                   }
                 >
-                  See more project
+                  查看更多项目
                 </ButtonLink>
               </article>
             </section>

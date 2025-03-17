@@ -51,7 +51,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
 
         <p className='animated-underline mt-2 inline-block font-medium'>
-          See more →
+          查看详情 →
         </p>
       </UnstyledLink>
     </li>
