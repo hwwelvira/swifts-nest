@@ -215,7 +215,7 @@ function sayHello() {
 
 ```
 // 基本用法
-<NextImage
+<Image
   src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/refs/heads/master/images/title.png"
   alt="示例图片"
   width={800}
@@ -228,7 +228,7 @@ function sayHello() {
 </div>
 <div>
 
-<NextImage
+<Image
   src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/refs/heads/master/images/title.png'
   alt='示例图片'
   width={800}
@@ -246,14 +246,14 @@ function sayHello() {
 
 ```mdx
 <div className='grid grid-cols-2 gap-4'>
-  <NextImage alt='左侧示例图片' />
-  <NextImage alt='右侧示例图片' />
+  <Image alt='左侧示例图片' />
+  <Image alt='右侧示例图片' />
 </div>
 ```
 
 <div className="grid grid-cols-2 gap-4">
 
-<NextImage
+<Image
   src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/refs/heads/master/images/title.png'
   alt='左侧示例图片'
   width={800}
@@ -262,7 +262,7 @@ function sayHello() {
   className='my-4 w-full rounded-lg shadow-lg'
 />
 
-<NextImage
+<Image
   src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/BJUT-Helper/refs/heads/master/images/title.png'
   alt='右侧示例图片'
   width={800}
@@ -297,11 +297,13 @@ function sayHello() {
 ## 项目相关
 
 ### Metadata
+
 - 项目元数据文档
 
 下面介绍多个项目的元数据，包括链接、视频的插入。元数据的结构设计使其易于集成到文档或项目管理工具中。
 
-- 
+-
+
 ```cpp
 ---
 横幅图片: 'projects/hexcape/hexcape-banner_xdulxw'
@@ -311,6 +313,7 @@ YouTube视频: 'https://www.youtube.com/watch?v=oxaDSU1uNPc'
 ```
 
 下面是一些例子
+
 ```cpp
 ---
 title: 'Hexcape'
@@ -324,13 +327,13 @@ youtube: 'https://www.youtube.com/watch?v=oxaDSU1uNPc'
 ---
 ```
 
-<NextImage
-  src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/image-20250218075631-fjdi2e6.png"
-  alt="示例图片"
+<Image
+  src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/image-20250218075631-fjdi2e6.png'
+  alt='示例图片'
   width={800}
   height={100}
   useSkeleton
-  className="w-full rounded-lg shadow-lg my-4"
+  className='my-4 w-full rounded-lg shadow-lg'
 />
 
 ```cpp
@@ -347,13 +350,13 @@ link: 'https://notiolink.thcl.dev'
 
 ```
 
-<NextImage
-  src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/image-20250218075734-1r5hcwg.png"
-  alt="示例图片"
+<Image
+  src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/image-20250218075734-1r5hcwg.png'
+  alt='示例图片'
   width={800}
   height={100}
   useSkeleton
-  className="w-full rounded-lg shadow-lg my-4"
+  className='my-4 w-full rounded-lg shadow-lg'
 />
 
 ```cpp
@@ -372,21 +375,18 @@ link: 'https://notiolink.thcl.dev'
   </div>
 </blockquote>
 
-
-
-
 ### 小组件
+
 - GithubCard
 
-<NextImage
-  src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/github2.png"
-  alt="示例图片"
+<Image
+  src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/github2.png'
+  alt='示例图片'
   width={800}
   height={300}
   useSkeleton
-  className="w-full rounded-lg shadow-lg my-4"
+  className='my-4 w-full rounded-lg shadow-lg'
 />
-
 
 这个组件的主要作用是获取并显示一个 GitHub 仓库的信息。当组件渲染时，它会自动发起请求获取数据，并将结果存储在 repository 变量中，同时处理可能出现的错误。
 
@@ -424,13 +424,13 @@ Deploy one of your own!
 
 - LiteYouTubeEmbed
 
-<NextImage
-  src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/viedo.png"
-  alt="示例图片"
+<Image
+  src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/viedo.png'
+  alt='示例图片'
   width={800}
   height={600}
   useSkeleton
-  className="w-full rounded-lg shadow-lg my-4"
+  className='my-4 w-full rounded-lg shadow-lg'
 />
 
 源代码如下
@@ -444,13 +444,13 @@ Deploy one of your own!
 />
 ```
 
-<NextImage
-  src="https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/youtube.png"
-  alt="示例图片"
+<Image
+  src='https://cdn.bjutswift.cn/https://raw.githubusercontent.com/bjut-swift/swift-image-hosting/main/swift-nest/tutorials/writing-guide/youtube.png'
+  alt='示例图片'
   width={800}
   height={600}
   useSkeleton
-  className="w-full rounded-lg shadow-lg my-4"
+  className='my-4 w-full rounded-lg shadow-lg'
 />
 
 源代码如下
@@ -479,7 +479,3 @@ Deploy one of your own!
       />
     </div>
 ```
-
-
-
-
