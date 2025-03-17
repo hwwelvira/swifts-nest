@@ -144,7 +144,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
                       })
                     }
                   >
-                    Open Live Site
+                    在线链接
                   </CustomLink>
                 </div>
               )}
