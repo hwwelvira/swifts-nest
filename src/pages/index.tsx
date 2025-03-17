@@ -238,8 +238,11 @@ export default function IndexPage({
             >
               <article className='layout' data-fade='0'>
                 <h2 className='text-2xl md:text-4xl' id='blog'>
-                  <Accent>Featured Posts</Accent>
+                  <Accent>专栏分享</Accent>
                 </h2>
+                <p className='mt-2 text-gray-600 dark:text-gray-300'>
+                  我们想传的更远的一些声音。
+                </p>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedPosts.map((post, i) => (
                     <BlogCard
@@ -271,9 +274,11 @@ export default function IndexPage({
             >
               <article className='layout' data-fade='0'>
                 <h2 className='text-2xl md:text-4xl' id='projects'>
-                  <Accent>Featured Projects</Accent>
+                  <Accent>已有项目</Accent>
                 </h2>
-                <p className='mt-2 text-gray-600 dark:text-gray-300'></p>
+                <p className='mt-2 text-gray-600 dark:text-gray-300'>
+                  正在发展中，欢迎任何同学参与建设。
+                </p>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedProjects.map((project, i) => (
                     <ProjectCard
@@ -349,6 +354,7 @@ export async function getStaticProps() {
     'bjut-helper',
     'bjut-latex',
     'bjut-ppt-temple',
+    'bjut-chaoxing',
   ]);
   const featuredShorts = getFeatured(shorts, [
     'tech/swift-git-guide',

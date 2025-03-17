@@ -16,6 +16,8 @@ const nextConfig = {
       'res.cloudinary.com',
       'cdn.bjutswift.cn',
       'raw.githubusercontent.com',
+      'scriptcat.org',
+      'vuejs.org',
 
       // Spotify Album
       'i.scdn.co',

@@ -21,6 +21,7 @@ import {
   SiSass,
   SiSwift,
   SiTailwindcss,
+  SiTampermonkey,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -136,5 +137,9 @@ const techList = {
   markdown: {
     icon: FaMarkdown,
     name: 'Markdown',
+  },
+  tampermonkey: {
+    icon: SiTampermonkey,
+    name: 'Tampermonkey',
   },
 };

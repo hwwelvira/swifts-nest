@@ -42,7 +42,7 @@ export default function IndexPage({
   const [sortOrder, setSortOrder] = React.useState<SortOption>(
     () => sortOptions[Number(getFromSessionStorage('blog-sort')) || 0]
   );
-  const [isEnglish] = React.useState<boolean>(true);
+  // const [isEnglish] = React.useState<boolean>(true);
   const isLoaded = useLoaded();
 
   const populatedPosts = useInjectContentMeta('blog', posts);
@@ -113,20 +113,16 @@ export default function IndexPage({
 
   return (
     <Layout>
-      <Seo
-        templateTitle='Blog'
-        description='Thoughts, mental models, and tutorials about front-end development. Rebuild your mental model so front-end development can be predictable.'
-      />
+      <Seo templateTitle='专栏分享' description='我们想传的更远的一些声音。' />
 
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
             <h1 className='text-3xl md:text-5xl' data-fade='0'>
-              <Accent>Blog {!isEnglish && 'Bahasa Indonesia'}</Accent>
+              <Accent>专栏分享</Accent>
             </h1>
             <p className='mt-2 text-gray-600 dark:text-gray-300' data-fade='1'>
-              Thoughts, mental models, and tutorials about front-end
-              development.
+              我们想传的更远的一些声音。
             </p>
             <StyledInput
               data-fade='2'

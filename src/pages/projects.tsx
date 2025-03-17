@@ -18,16 +18,16 @@ export default function ProjectsPage({
 
   return (
     <Layout>
-      <Seo templateTitle='Projects' description='正在建设中……' />
+      <Seo templateTitle='已有项目' description='正在建设中……' />
 
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
             <h1 className='text-3xl md:text-5xl' data-fade='0'>
-              <Accent>Projects</Accent>
+              <Accent>已有项目</Accent>
             </h1>
             <p data-fade='1' className='mt-2 text-gray-600 dark:text-gray-300'>
-              正在建设中……
+              正在发展中，欢迎任何同学参与建设。
             </p>
 
             <ul
