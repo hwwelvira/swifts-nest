@@ -1,10 +1,13 @@
 ---
-title: 'Next.js 速成指南'
-tags: 'react,nextjs,tailwind-css'
-description: '使用 Next.js 快速构建前端应用'
+title: 'Next.js 指南'
+description: '从零开始学习 Next.js'
+tags: 'nextjs,react,typescript'
 ---
 
-# swift-nextjs
+<br />
+<div className='flex justify-center'>
+  <GithubCard repo='bjut-swift/swift-nextjs' />
+</div>
 
 所用技术栈：`Next.js`, `Tailwind CSS`, `TypeScript`, `DaisyUI`
 
@@ -99,7 +102,7 @@ const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 
 ## Rendering
 
-<Image
+<NextImage
   src='https://cdn.bjutswift.cn/raw.githubusercontent.com/bjut-swift/swift-nextjs/refs/heads/main/assets/1.png'
   alt='Rendering'
   width={800}
@@ -118,7 +121,7 @@ const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 npm run build
 ```
 
-<Image
+<NextImage
   src='https://cdn.bjutswift.cn/raw.githubusercontent.com/bjut-swift/swift-nextjs/refs/heads/main/assets/2.png'
   alt='Before'
   width={800}
@@ -129,7 +132,7 @@ npm run build
 
 使用`cache: 'no-store'`后：
 
-<Image
+<NextImage
   src='https://cdn.bjutswift.cn/raw.githubusercontent.com/bjut-swift/swift-nextjs/refs/heads/main/assets/3.png'
   alt='After'
   width={800}
@@ -233,7 +236,7 @@ const UserDetailPage = ({ parmas: { id } }: Props) => {
 2. 更多参数的路由
 
 <div align='center'>
-  <Image
+  <NextImage
     src='https://cdn.bjutswift.cn/raw.githubusercontent.com/bjut-swift/swift-nextjs/refs/heads/main/assets/4.png'
     alt='Router with more parameters'
     width={400}
@@ -562,7 +565,7 @@ export async function POST(request: NextRequest) {
 }
 ```
 
-<Image
+<NextImage
   src='https://cdn.bjutswift.cn/raw.githubusercontent.com/bjut-swift/swift-nextjs/refs/heads/main/assets/5.png'
   alt='Building APIs'
   width={800}

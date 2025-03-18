@@ -43,7 +43,7 @@ export default function AboutPage() {
             </h2>
             <h1 className='mt-4 text-7xl font-bold' data-fade='1'>
               <Accent className='bg-gradient-to-r from-blue-800 to-purple-600 bg-clip-text text-transparent'>
-                BJUT-SWIFT
+                BJUT SWIFT
               </Accent>
             </h1>
             <div data-fade='2' className='mx-auto max-w-2xl'>
@@ -67,8 +67,10 @@ export default function AboutPage() {
             <div className='bg-noise absolute inset-0 opacity-10' />
             <div className='relative px-8 py-12'>
               <div className='mb-16 text-center'>
-                <h3 className='bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-4xl font-bold text-transparent'>
-                  <Accent>核心项目 📚</Accent>
+                <h3 className='text-4xl font-bold'>
+                  <span className='bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-cyan-300'>
+                    核心项目 📚
+                  </span>
                 </h3>
               </div>
 
@@ -144,14 +146,22 @@ export default function AboutPage() {
 
         {/* 联系方式 - 暗色模式智能光效版 */}
         <section className='group relative py-20'>
-          {/* 动态光效层（仅在暗色模式生效） */}
-          <div className='absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 dark:opacity-100'>
-            <div className='absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-400/15 to-purple-500/20 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-40 dark:animate-pulse' />
-            <div className='bg-noise absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-10' />
-            <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(66,153,225,0.3)_0%,transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-50' />
+          {/* 完全重新设计的光效系统 */}
+          <div className='absolute left-1/2 top-1/2 -z-10 h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2'>
+            {/* 中心光晕 - 大范围发散 */}
+            <div className='absolute left-1/2 top-1/2 h-[60vh] w-[60vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-blue-500/5 via-cyan-400/5 to-purple-500/5 opacity-0 blur-[100px] transition-opacity duration-700 group-hover:opacity-100 dark:from-blue-500/20 dark:via-cyan-400/15 dark:to-purple-500/20'></div>
+
+            {/* 左上光晕 */}
+            <div className='absolute left-[40%] top-[40%] h-[30vh] w-[30vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/5 opacity-0 blur-[80px] transition-opacity duration-700 group-hover:opacity-70 dark:bg-blue-500/15'></div>
+
+            {/* 右下光晕 */}
+            <div className='absolute left-[60%] top-[60%] h-[25vh] w-[25vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/5 opacity-0 blur-[60px] transition-opacity duration-700 group-hover:opacity-70 dark:bg-cyan-400/15'></div>
+
+            {/* 动态脉冲光晕 */}
+            <div className='absolute left-1/2 top-1/2 h-[40vh] w-[40vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-400/10 opacity-0 blur-[80px] transition-opacity duration-500 group-hover:opacity-0 dark:animate-pulse dark:from-blue-500/20 dark:to-cyan-400/20 dark:group-hover:opacity-80'></div>
           </div>
 
-          <div className='mx-auto max-w-2xl px-4'>
+          <div className='relative z-10 mx-auto max-w-2xl px-4'>
             <div
               className={clsx(
                 'relative bg-white/70 backdrop-blur-2xl dark:bg-gray-800/60',
@@ -159,13 +169,13 @@ export default function AboutPage() {
                 'shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30',
                 'transition-all duration-500 hover:-translate-y-2',
                 'overflow-hidden',
-                'group-hover:dark:border-cyan-400/40', // 悬停时增强边框光效
-                'group-hover:border-blue-200' // 亮色模式下悬停时增强边框
+                'group-hover:dark:border-cyan-400/40',
+                'group-hover:border-blue-200'
               )}
             >
               <div className='bg-grid-blue-500/[0.02] dark:bg-grid-cyan-400/[0.02] absolute inset-0' />
 
-              <div className='space-y-6 px-8 py-12 text-center'>
+              <div className='space-y-6 px-4 py-12 text-center sm:px-8'>
                 {/* 星芒图标容器 */}
                 <div className='inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-2 shadow-lg transition-shadow duration-300 hover:shadow-cyan-400/20'>
                   <svg
@@ -187,7 +197,7 @@ export default function AboutPage() {
 
                 <p className='text-lg leading-relaxed text-gray-600 dark:text-gray-300'>
                   我们正在构建一个
-                  <span className='mx-2 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text font-semibold text-transparent'>
+                  <span className='whitespace-nowrap bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text font-semibold text-transparent'>
                     开放协作
                   </span>
                   的技术社区
@@ -195,11 +205,11 @@ export default function AboutPage() {
                   你的每一个创意都可能成为改变校园的种子
                 </p>
 
-                <div className='relative inline-block'>
+                <div className='relative mx-auto max-w-fit'>
                   <a
                     href='mailto:bjutswift.cn@gmail.com'
                     className={clsx(
-                      'inline-flex items-center gap-3 rounded-2xl px-8 py-4',
+                      'inline-flex items-center gap-3 rounded-2xl px-6 py-4 sm:px-8',
                       'bg-gradient-to-r from-blue-600/90 to-cyan-500/90',
                       'font-semibold text-white shadow-lg',
                       'transform transition-all duration-300',
@@ -217,11 +227,13 @@ export default function AboutPage() {
                       <path d='M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z' />
                       <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
                     </svg>
-                    <span>bjutswift.cn@gmail.com</span>
+                    <span className='text-sm sm:text-base'>
+                      bjutswift.cn@gmail.com
+                    </span>
                   </a>
 
-                  <div className='absolute -right-4 -top-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:opacity-100'>
-                    <div className='relative h-8 w-8 animate-float'>
+                  <div className='absolute -right-2 -top-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:opacity-100 sm:-right-4 sm:-top-4'>
+                    <div className='relative h-6 w-6 animate-float sm:h-8 sm:w-8'>
                       <div className='absolute inset-0 rounded-full bg-cyan-400' />
                       <div className='absolute inset-0 rounded-full bg-white/30 backdrop-blur-sm' />
                     </div>
@@ -240,8 +252,8 @@ export default function AboutPage() {
         <section className='py-20'>
           <div className='text-center'>
             <h3 className='mb-12 text-4xl font-bold'>
-              <span className='bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent'>
-                <Accent>基于技术栈</Accent>
+              <span className='bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-cyan-300'>
+                技术栈
               </span>
               <div className='mt-4 inline-block animate-bounce'>⚡</div>
             </h3>

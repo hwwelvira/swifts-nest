@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import {
+  SiBun,
   SiNextdotjs,
   SiPrisma,
   SiReact,
-  SiReactquery,
+  // SiReactquery,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
@@ -32,6 +33,17 @@ export default function TechStack() {
 }
 
 const stacks = [
+  {
+    id: 'bun',
+    icon: SiBun,
+    tooltip: (
+      <>
+        <CustomLink href='https://bun.sh/'>Bun</CustomLink>, 一个高性能的
+        JavaScript
+        运行时和工具套件，集成了开发所需的核心功能，是我们的首选工具链。
+      </>
+    ),
+  },
   {
     id: 'nextjs',
     icon: SiNextdotjs,
@@ -72,17 +84,6 @@ const stacks = [
       <>
         <CustomLink href='https://tailwindcss.com/'>Tailwind CSS</CustomLink>,
         一个实用性极高的CSS框架。它提供了大量的预定义类，可以快速实现样式的重用和自定义。
-      </>
-    ),
-  },
-  {
-    id: 'react-query',
-    icon: SiReactquery,
-    tooltip: (
-      <>
-        <CustomLink href='https://tanstack.com/'>TanStack Query</CustomLink>,
-        一个功能强大的React Hooks
-        库。它提供了数据获取和缓存的解决方案，提高了应用程序的性能和用户体验。
       </>
     ),
   },
