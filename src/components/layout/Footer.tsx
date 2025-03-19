@@ -19,7 +19,7 @@ export default function Footer() {
       <main className='layout flex flex-col items-center border-t pt-6 dark:border-gray-600'>
         <FooterLinks />
         <p className='mt-12 font-medium text-gray-600 dark:text-gray-300'>
-          Reach me out
+          联系我们
         </p>
         <SocialLinks />
 
@@ -78,7 +78,7 @@ function SocialLinks() {
           html={
             <div className='inline-block rounded-md border bg-white p-2 text-gray-600 shadow-md dark:border-gray-600 dark:bg-dark dark:text-gray-200'>
               {copyStatus === 'idle'
-                ? 'Click the mail logo to copy'
+                ? 'Click the mail logo to copy '
                 : 'Copied to clipboard 🥳'}
               <Accent className='inline-block font-medium'>
                 bjut.swift@gmail.com
@@ -124,43 +124,42 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
     {
       href: 'https://github.com/bjut-swift/swifts-nest',
-      text: 'Source Code',
+      text: '源代码',
       tooltip: (
         <>
-          This website is <strong>open source</strong>!
+          这个网站是 <strong>开源</strong> 的！
         </>
       ),
     },
     {
       href: '/design',
-      text: 'Design',
-      tooltip: 'BJUT SWIFT color palette',
+      text: '设计',
+      tooltip: '网站的色彩搭配',
     },
     {
-      href: 'https://github.com/bjut-swift/manual',
-      text: 'Docs',
-      tooltip: 'BJUT SWIFT官网操作手册',
+      href: 'https://www.bjutswift.cn/shorts/writing-guide',
+      text: '操作手册',
+      tooltip: 'BJUT SWIFT 官网操作手册',
     },
     {
       href: '/statistics',
-      text: 'Statistics',
-      tooltip: 'Blog, Projects, and Library Statistics',
+      text: '统计信息',
+      tooltip: '网站统计信息',
     },
     {
       href: '/guestbook',
-      text: 'Guestbook',
-      tooltip:
-        'Leave whatever you like to say—message, appreciation, suggestions',
+      text: '留言簿',
+      tooltip: '我们想听到你的声音',
     },
     {
       href: '/subscribe',
-      text: 'Subscribe',
-      tooltip: 'Get an email whenever I post, no spam',
+      text: '订阅',
+      tooltip: 'RSS 订阅',
     },
     {
       href: 'https://bjutswift.cn/rss.xml',
       text: 'RSS',
-      tooltip: 'Add BJUT SWIFT blog to your feeds',
+      tooltip: '添加 BJUT SWIFT 博客到你的订阅源',
     },
   ];
 
@@ -177,7 +176,7 @@ const socials: Social[] = [
     id: 'Github',
     text: (
       <>
-        See my projects on <Accent className='font-medium'>Github</Accent>
+        查看我们的 <Accent className='font-medium'>Github</Accent>
       </>
     ),
   },
