@@ -17,7 +17,12 @@ export default function TechStack() {
   return (
     <div className='flex items-center justify-center space-x-4 md:space-x-8'>
       {stacks.map((tech) => (
-        <Tooltip key={tech.id} tipChildren={<p>{tech.tooltip}</p>}>
+        <Tooltip
+          key={tech.id}
+          tipChildren={
+            <p className='max-w-[200px] sm:max-w-none'>{tech.tooltip}</p>
+          }
+        >
           <tech.icon
             key={tech.id}
             className={clsx(
@@ -50,7 +55,8 @@ const stacks = [
     tooltip: (
       <>
         <CustomLink href='https://nextjs.org'>Next.js</CustomLink>,
-        一个功能强大且灵活的React框架。它提供了静态生成、动态路径和内置API等功能，极大地提高了开发效率和网站性能。
+        一个功能强大且灵活的 React 框架。它提供了静态生成、动态路径和内置 API
+        等功能，极大地提高了开发效率和网站性能。
       </>
     ),
   },
@@ -72,8 +78,8 @@ const stacks = [
         <CustomLink href='https://www.typescriptlang.org/'>
           TypeScript
         </CustomLink>
-        ,
-        一个静态类型检查的JavaScript超集。它可以帮助开发者编写更安全、更可维护的代码。
+        , 一个静态类型检查的 JavaScript
+        超集。它可以帮助开发者编写更安全、更可维护的代码。
       </>
     ),
   },
@@ -83,7 +89,8 @@ const stacks = [
     tooltip: (
       <>
         <CustomLink href='https://tailwindcss.com/'>Tailwind CSS</CustomLink>,
-        一个实用性极高的CSS框架。它提供了大量的预定义类，可以快速实现样式的重用和自定义。
+        一个实用性极高的 CSS
+        框架。它提供了大量的预定义类，可以快速实现样式的重用和自定义。
       </>
     ),
   },
@@ -93,7 +100,8 @@ const stacks = [
     tooltip: (
       <>
         <CustomLink href='https://www.prisma.io/'>Prisma</CustomLink>,
-        一个简单易用的ORM工具。它提供了简洁的数据模型定义和查询API，帮助开发者快速构建数据层。
+        一个简单易用的 ORM 工具。它提供了简洁的数据模型定义和查询
+        API，帮助开发者快速构建数据层。
       </>
     ),
   },
