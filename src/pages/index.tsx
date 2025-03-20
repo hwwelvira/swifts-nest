@@ -352,7 +352,7 @@ export async function getStaticProps() {
   const featuredPosts = getFeatured(blogs, [
     '2024-cs50x',
     '2023-code-journy',
-    '2024-intern-interview',
+    '2025-intern-interview',
   ]);
   const featuredProjects = getFeatured(projects, [
     'bjut-helper',
