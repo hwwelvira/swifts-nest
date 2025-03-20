@@ -13,10 +13,19 @@ export function sortDateFn<T extends FrontmatterWithDate>(
   contentA: T,
   contentB: T
 ) {
-  return (
-    new Date(contentB.lastUpdated ?? contentB.publishedAt).valueOf() -
-    new Date(contentA.lastUpdated ?? contentA.publishedAt).valueOf()
-  );
+  // Safely parse dates by ensuring proper format
+  const getDateValue = (content: T) => {
+    const dateStr = content.lastUpdated ?? content.publishedAt;
+    // Handle potential dot format
+    const safeDateStr = dateStr.replace(/\./g, '-');
+    // Ensure T separator for ISO format if needed
+    const isoDateStr = safeDateStr.includes(' ')
+      ? safeDateStr.replace(' ', 'T')
+      : safeDateStr;
+    return new Date(isoDateStr).valueOf();
+  };
+
+  return getDateValue(contentB) - getDateValue(contentA);
 }
 
 export function sortByDate<T extends FrontmatterWithDate>(contents: Array<T>) {
