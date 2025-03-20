@@ -206,18 +206,32 @@ export default function IndexPage({
                   </div>
 
                   <div className='mt-8 w-full md:mt-0 md:w-1/2'>
-                    <div className='perspective-1000 relative mx-auto h-[400px] w-[350px] max-w-full'>
+                    <div className='perspective-1000 relative mx-auto h-[400px] w-full max-w-[350px]'>
                       <div className='group relative h-full w-full'>
-                        <div className='absolute inset-0 z-10 transition-all duration-700 ease-in-out group-hover:z-0 group-hover:translate-x-[8%] group-hover:translate-y-[5%] group-hover:rotate-6 group-hover:opacity-90'>
+                        <div
+                          className={clsx(
+                            'absolute inset-0 z-10 transition-all duration-700 ease-in-out',
+                            'w-[90%] sm:w-[90%]',
+                            'group-hover:z-0 group-hover:translate-x-[8%] group-hover:translate-y-[5%] group-hover:rotate-6 group-hover:opacity-90'
+                          )}
+                        >
                           <BlogCard
-                            className='h-full w-[90%] rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
+                            className='h-full w-full rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
                             post={populatedIntro[0]}
                           />
                         </div>
 
-                        <div className='absolute inset-0 z-0 translate-x-[8%] translate-y-[5%] rotate-6 opacity-90 transition-all duration-700 ease-in-out group-hover:z-10 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:opacity-100'>
+                        <div
+                          className={clsx(
+                            'absolute inset-0 z-0',
+                            'w-[90%] sm:w-[90%]',
+                            'translate-x-[8%] translate-y-[5%] rotate-6 opacity-90',
+                            'transition-all duration-700 ease-in-out',
+                            'group-hover:z-10 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:opacity-100'
+                          )}
+                        >
                           <BlogCard
-                            className='h-full w-[90%] rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
+                            className='h-full w-full rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl'
                             post={populatedIntro[1]}
                           />
                         </div>
