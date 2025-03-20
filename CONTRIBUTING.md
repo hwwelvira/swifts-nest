@@ -13,4 +13,3 @@
 ## Pull Requests 🔃
 
 对于 bug 修复或内容错别字，你可以直接提交 Pull Request。
-
