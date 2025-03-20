@@ -32,7 +32,7 @@ import TableOfContents, {
 import CloudinaryImg from '@/components/images/CloudinaryImg';
 import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
-import ShareTweetButton from '@/components/links/ShareTweetButton';
+import ShareBlogButton from '@/components/links/ShareBlogButton';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Tooltip from '@/components/Tooltip';
@@ -150,14 +150,14 @@ export default function SingleBlogPage({
               <h1 className='mt-4'>{frontmatter.title}</h1>
 
               <p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
-                Written on{' '}
+                写于{' '}
                 {format(new Date(frontmatter.publishedAt), 'MMMM dd, yyyy')} by{' '}
-                {frontmatter.author || 'BJUT Swift'}.
+                {frontmatter.author || 'BJUT SWIFT'}.
               </p>
               {frontmatter.lastUpdated && (
                 <div className='mt-2 flex flex-wrap gap-2 text-sm text-gray-700 dark:text-gray-200'>
                   <p>
-                    Last updated{' '}
+                    最后更新于{' '}
                     {format(new Date(frontmatter.lastUpdated), 'MMMM dd, yyyy')}
                     .
                   </p>
@@ -170,7 +170,7 @@ export default function SingleBlogPage({
                     )}
                   >
                     <MdHistory className='text-lg' />
-                    <span>See changes</span>
+                    <span>查看变更</span>
                   </UnstyledLink>
                 </div>
               )}
@@ -237,16 +237,16 @@ export default function SingleBlogPage({
               </aside>
             </section>
 
-            <ShareTweetButton
+            <ShareBlogButton
               className='mt-12'
-              url={`https://theodorusclarence.com/blog/${frontmatter.slug}`}
+              url={`https://bjutswift.cn/blog/${frontmatter.slug}`}
               title={frontmatter.title}
             />
 
             {populatedRecommendations.length > 0 && (
               <div className='mt-20'>
                 <h2>
-                  <Accent>Other posts that you might like</Accent>
+                  <Accent>更多内容推荐</Accent>
                 </h2>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedRecommendations.map((post, i) => (
@@ -263,13 +263,11 @@ export default function SingleBlogPage({
               </div>
             )}
 
-            <SubscribeCard className='mt-12' title='Enjoying this post?' />
+            <SubscribeCard className='mt-12' title='喜欢这篇文章吗？' />
 
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
-              <CustomLink href={GITHUB_EDIT_LINK}>
-                Edit this on GitHub
-              </CustomLink>
-              <CustomLink href='/blog'>← Back to blog</CustomLink>
+              <CustomLink href={GITHUB_EDIT_LINK}>在 GitHub 上编辑</CustomLink>
+              <CustomLink href='/blog'>← 返回文章</CustomLink>
             </div>
             <figure className='mt-12'>
               <Waline

@@ -1,64 +1,16 @@
-# Contributing 👨‍💻
+# 贡献指南 👨‍💻
 
-Thank you for your interest to contribute!
+感谢你有兴趣为本项目做出贡献！
 
-I would love your help to improve this project. Here are some tips and guidelines to help you along the way.
+在开始贡献之前，请务必阅读 [发文指南](src/contents/library/writing-guide.mdx)，了解项目的基本规范和要求。
 
 ## Issues 🐞
 
-If you come across a bug or something that can be improved, please [open an issue](https://github.com/theodorusclarence/theodorusclarence.com/issues). It would be helpful if you provide some description or screen recording!
+如果你发现了 bug 或者有改进建议，请[提交 Issue](https://github.com/bjut-swift/bjut-swift.github.io/issues)。提交时请尽可能详细地描述问题或提供截图/录屏。
 
-For improvements, before you start working on it, please discuss it first so I can ensure to merge your beautiful work into the project. I'll do my best to answer quickly and discuss the upcoming ideas 🙌
+对于功能改进类的建议，请先在 Issue 中讨论，以确保你的工作能顺利合并到项目中。我们会尽快回复并讨论你的想法 🙌
 
 ## Pull Requests 🔃
 
-You can directly open a pull request for a bug fix or content typos.
+对于 bug 修复或内容错别字，你可以直接提交 Pull Request。
 
-## Project Setup 🔧
-
-If you want to set up the project locally, feel free to follow these steps:
-
-First, fork the repo, then:
-
-```sh
-git clone <your-fork>
-cd ./theodorusclarence.com
-
-# Copy the .env.example to .env.local
-#   most features are turned off by default
-#   so you won't need to add any envs
-cp .env.example .env.local
-
-# Install the dependencies
-pnpm
-
-# Run the development server
-pnpm dev
-```
-
-You can now open up `http://localhost:3000` and start writing code!
-
-## Feature Flag
-
-Major features are feature flagged in [constants/env.ts](https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/constants/env.ts)
-
-For example:
-
-```ts
-export const commentFlag = isProd;
-```
-
-you can change the `isProd` into `true` to turn the feature on, but expect some error because you don't have any access to the environment variable. I'm not planning to mock them for any time soon, so you can simply leave an issue for these specific features.
-
-## Format 💅
-
-When writing your code, please try to follow the existing code style.
-
-Your code will be automatically linted and formatted before each commit. However, if you want to manually lint and format, use the provided pnpm scripts.
-
-```sh
-pnpm lint:fix
-pnpm format
-```
-
-You also have to follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for the commit message.

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
+import { InterviewHeader } from '@/components/content/blog/InterviewHeader';
+import { KeyInsight } from '@/components/content/blog/KeyInsight';
 import Quiz from '@/components/content/blog/Quiz';
 import GithubCard from '@/components/content/card/GithubCard';
 import { Pre } from '@/components/content/Pre';
@@ -29,6 +31,8 @@ const MDXComponents = {
   Quiz,
   FeishuDocEmbed,
   LaTeX,
+  KeyInsight,
+  InterviewHeader,
 };
 
 export default MDXComponents;

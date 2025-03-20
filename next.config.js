@@ -18,7 +18,7 @@ const nextConfig = {
       'raw.githubusercontent.com',
       'scriptcat.org',
       'vuejs.org',
-
+      'avatars.githubusercontent.com',
       // Spotify Album
       'i.scdn.co',
     ],

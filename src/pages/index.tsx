@@ -349,7 +349,11 @@ export async function getStaticProps() {
   const projects = await getAllFilesFrontmatter('projects');
   const shorts = await getAllFilesFrontmatter('library');
 
-  const featuredPosts = getFeatured(blogs, ['2024-cs50x', '2023-code-journy']);
+  const featuredPosts = getFeatured(blogs, [
+    '2024-cs50x',
+    '2023-code-journy',
+    '2024-intern-interview',
+  ]);
   const featuredProjects = getFeatured(projects, [
     'bjut-helper',
     'bjut-latex',
