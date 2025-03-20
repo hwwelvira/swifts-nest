@@ -25,9 +25,6 @@ const nextConfig = {
       'i.scdn.co',
     ],
   },
-  timeouts: {
-    request: 15000,
-  },
   async redirects() {
     return [
       {
